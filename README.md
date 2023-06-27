@@ -1,1 +1,13 @@
-# aws-certified-developer-accociate
+# AWS Certified Developer - Associate 
+
+***
+
+## SIMPLE STORAGE SERVICE (S3)
+
+### Summary
+
+ - Bucket name are _globally unique_
+ - 3 - 63 characters, all lowercase, no underscores
+ - Start with a lowercase letter or a number
+ - Can't be IP formatted e.g. 1.1.1.1
+ - Buckets - 100 softer limit, 1000 hard per account 
