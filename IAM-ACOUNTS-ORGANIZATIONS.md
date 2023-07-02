@@ -30,3 +30,12 @@ This single statement allows the following actions on resources:
 
 - `s3:GetObject` and `s3:PutObject` on objects within the "example-bucket" S3 bucket.
 - `dynamodb:GetItem`, `dynamodb:PutItem`, and `dynamodb:DeleteItem` on the "example-table" DynamoDB table in the US East (N. Virginia) region.
+
+### Handle Overlap in Access
+
+- Explicit Deny - Overrules everthing else
+- Explicit Alow - Take effect unless there is an explicit Deny (Deny always wins)
+- Default Deny (Implicit)
+
+
+### IAM Users and ARNs
