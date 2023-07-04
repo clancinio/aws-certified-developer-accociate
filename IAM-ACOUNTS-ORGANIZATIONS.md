@@ -1,6 +1,6 @@
-## IAM, ACCOUNTS, and AWS ORGANIZATIONS
+# IAM, ACCOUNTS, and AWS ORGANIZATIONS
 
-### IAM Identity Policies
+## IAM Identity Policies
 
 An identity policy in AWS IAM determines the permissions and access rights for users or groups. It specifies the actions and resources they can access in AWS. Identity policies ensure secure and controlled access to AWS services, following the principle of least privilege.
 
@@ -37,5 +37,12 @@ This single statement allows the following actions on resources:
 - Explicit Alow - Take effect unless there is an explicit Deny (Deny always wins)
 - Default Deny (Implicit)
 
+<br>
 
-### IAM Users and ARNs
+## IAM Users and ARNs
+
+IAM Users are one of the identity types available inside AWS.
+
+They are type you pick when you can identify a single individual or 'thing' which will use that identity - a person, an application or a service account.
+
+![Blank diagram (2)](https://github.com/clancinio/aws-certified-developer-accociate/assets/20428737/06462967-ee62-4361-a60d-a2c1d1354358)
