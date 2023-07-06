@@ -104,3 +104,38 @@ Advantages of Roles in this situation:
 - Because the IAM Role in the partner account is an identity in that account, then using that role means that any objects that you upload to that bucket are owned by the partner account.
 
 ![](images/Multi_Account.png)
+
+
+## Security Token Service (STS)
+
+- Generates temporary credentials (sts:AssumeRole*)
+- They expire and don't belong to the identity
+- Limited access
+- Used to access AWS resources
+- Requested by an identity (AWS or EXTERNAL)
+
+![](images/sts.png)
+
+
+## AWS Organizations 
+
+AWS Organizations is a product which allows larger businesses to manage multiple AWS accounts in a cost-effective way.
+
+Without AWS organizations, a business with multiple AWS accounts would need to have its own pool of IAM Users for each account, and separate payment methods:
+
+![](images/orgs1.png)
+
+
+With a standard AWS account (AWS account that is not in an organization), you create an AWS Organization.
+
+- The organization isn't in the AWS account, you just use the account to create the Organization
+- This account that you used to create the Organization becomes the _**Management Account**_
+- Using this management account, you can invite other existing standard AWS account into the organization
+- These account will need to approve the invite to join the org. These account will become part of the organization.
+- When these account join the organization, then change from **_standard accounts_** to _**member accounts**_ of that organization 
+
+![](images/orgs2.png)
+
+- You can also create new accounts directly withing the organization (Just need unique email)
+- Adding accounts in this way means there is no invite process
+- With orgs, you don't need to have IAM User inside every AWS account. Instead, AWS Roles can be used to allow IAM User to access other AWS accounts
