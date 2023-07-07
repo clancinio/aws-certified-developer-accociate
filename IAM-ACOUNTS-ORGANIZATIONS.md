@@ -139,3 +139,19 @@ With a standard AWS account (AWS account that is not in an organization), you cr
 - You can also create new accounts directly withing the organization (Just need unique email)
 - Adding accounts in this way means there is no invite process
 - With orgs, you don't need to have IAM User inside every AWS account. Instead, AWS Roles can be used to allow IAM User to access other AWS accounts
+
+
+## Service Control Policies (SCP)
+
+- SCPs are **_account permissions boundaries_**
+- The management account is the only account within an AWS Organization that can't be restricted using SCPs
+- They limit what the account (including root user) can do
+- With a SCP, you actually restrict what an account itself can do. Restricting the account, in effect, restricts the root user.
+- _SCPs don't actually grant any access rights, they establish which permission can be granted in an account_***
+
+![](images/SPC.png)
+
+The concept of a SCP:
+- JSON Document
+- The policies can be attached to the Root Container of the Organization (Organization as a whole), one or more OU's, and indicidual AWS accounts
+- SCP inherit down the organizational tree.
