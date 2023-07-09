@@ -1,5 +1,7 @@
 # IAM, ACCOUNTS, and AWS ORGANIZATIONS
 
+<hr>
+
 ## IAM Identity Policies
 
 An identity policy in AWS IAM determines the permissions and access rights for users or groups. It specifies the actions and resources they can access in AWS. Identity policies ensure secure and controlled access to AWS services, following the principle of least privilege.
@@ -38,6 +40,8 @@ This single statement allows the following actions on resources:
 - Default Deny (Implicit)
 
 <br>
+<hr>
+
 
 ## IAM Users and ARNs
 
@@ -73,6 +77,9 @@ arn:aws:s3:::doggifs/*      // Objects in the bucket
 - Large orgs & org merges
 - IAM Roles & Identity Federation fix this (more on this later)
 
+<br>
+<hr>
+
 ## IAM Groups
 
 IAM Groups are containers for Users
@@ -80,6 +87,9 @@ IAM Groups are containers for Users
 - Groups can have Policies attached to them (Inline and Managed)
 
 ![](images/Blank_diagram(3).png)
+
+<br>
+<hr>
 
 ## IAM Roles
 
@@ -105,6 +115,8 @@ Advantages of Roles in this situation:
 
 ![](images/Multi_Account.png)
 
+<br>
+<hr>
 
 ## Security Token Service (STS)
 
@@ -116,6 +128,8 @@ Advantages of Roles in this situation:
 
 ![](images/sts.png)
 
+<br>
+<hr>
 
 ## AWS Organizations 
 
@@ -140,6 +154,8 @@ With a standard AWS account (AWS account that is not in an organization), you cr
 - Adding accounts in this way means there is no invite process
 - With orgs, you don't need to have IAM User inside every AWS account. Instead, AWS Roles can be used to allow IAM User to access other AWS accounts
 
+<br>
+<hr>
 
 ## Service Control Policies (SCP)
 
