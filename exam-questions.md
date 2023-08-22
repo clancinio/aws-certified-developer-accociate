@@ -144,6 +144,7 @@
 - 172.31.0.0/16  :white_check_mark:
 - 10.0.0.0/16
 
+<br>
 <hr>
 
 ## IAM, ACCOUNTS AND AWS ORGANISATIONS
@@ -170,3 +171,35 @@
 - Explicit Deny  :white_check_mark:
 - Depends on the order in the policy
 - No priority
+
+### 4. What two policies are assigned to an IAM Role
+
+- Permissions Policy :white_check_mark:
+- Assumption Policy
+- Resource Policy
+- Trust Policy :white_check_mark:
+
+### 5. Which of the following are true for IAM Roles
+
+- Roles have associated Long Term Credentials (Access Keys)
+- Roles can be assumed :white_check_mark:
+- When assumed - temporary credentials are generated :white_check_mark:
+- Roles can be logged into
+- When an identity logs into a role - temporary credentials are generated
+
+### 6. What Three features are provided by AWS Organizations (pick all that apply)
+
+- Consolidated billing  :white_check_mark:
+- Managed assistance for company and AWS account mergers
+- AWS Account restrictions using SCP  :white_check_mark:
+- Account organisation via OU's  :white_check_mark:
+- Protection against credential leaks
+- Company ID reports
+
+### 7. What functionality is provided by CloudTrail
+
+- Log Ingestion
+- Metrics management
+- Account Restrictions
+- Account wide Auditing and API Logging
+
