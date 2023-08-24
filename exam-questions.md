@@ -201,5 +201,29 @@
 - Log Ingestion
 - Metrics management
 - Account Restrictions
-- Account wide Auditing and API Logging
+- Account wide Auditing and API Logging :white_check_mark:
 
+### 8. Is it possible to restrict what the Account Root User can do?
+
+- Always
+- Never
+- If AWS Organisations are used
+- If AWS Organizations are used (but not the management account) :white_check_mark:
+
+
+### 9. What is Role Switching?
+
+- Changing the permissions on an IAM Role
+- Changing the TRUST on a Role
+- Changing who can assume a Role
+- Logging into a Role
+- Assuming a role in another AWS account to access that account via the console UI :white_check_mark:
+
+
+### 10. What is Role Switching?What are valid IAM Policy types?
+
+- AWS Managed Policy :white_check_mark:
+- Customer Managed Policy :white_check_mark:
+- Self-Managed Policy
+- Inline Policies :white_check_mark:
+- External Policies
