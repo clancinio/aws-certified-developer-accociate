@@ -227,3 +227,68 @@
 - Self-Managed Policy
 - Inline Policies :white_check_mark:
 - External Policies
+
+<br>
+<hr>
+
+## CloudWatch
+
+### 1. Your company manages hundreds of EC2 instances running on Linux OS. The instances are configured in several Availability Zones in the eu-west-3 region. Your manager has requested to collect system memory metrics on all EC2 instances using a script.
+
+### Which of the following solutions will help you collect this data?
+
+- Use a cron job on the instances that pushes the EC2 RAM statistics as a Custom metric into CloudWatch :white_check_mark:
+- Extract RAM statistics using the instance metadata"
+- Extract RAM statistics from the standard CloudWatch metrics for EC2 instances"
+- Extract RAM statistics using X-Ray
+
+The Amazon CloudWatch Monitoring Scripts for Amazon Elastic Compute Cloud (Amazon EC2) Linux-based instances demonstrate how to produce and consume Amazon CloudWatch custom metrics. These Perl scripts comprise a fully functional example that reports memory, swap, and disk space utilization metrics for a Linux instance. You can set a cron schedule for metrics reported to CloudWatch and report memory utilization to CloudWatch every x minutes.
+
+<br>
+
+### 2. An IT company uses a blue/green deployment policy to provision new Amazon EC2 instances in an Auto Scaling group behind a new Application Load Balancer for each new application version. The current set up requires the users to log in after every new deployment.
+
+### As a Developer Associate, what advice would you give to the company for resolving this issue?
+
+- Use rolling updates instead of a blue/green deployment
+- Use ElastiCache to maintain user sessions :white_check_mark:
+- Enable sticky sessions in the Application Load Balancer
+- Use multicast to replicate session information
+
+Amazon ElastiCache allows you to seamlessly set up, run, and scale popular open-Source compatible in-memory data stores in the cloud. Build data-intensive apps or boost the performance of your existing databases by retrieving data from high throughput and low latency in-memory data stores. Amazon ElastiCache is a popular choice for real-time use cases like Caching, Session Stores, Gaming, Geospatial Services, Real-Time Analytics, and Queuing.
+
+To address scalability and to provide a shared data storage for sessions that can be accessed from any individual web server, you can abstract the HTTP sessions from the web servers themselves. A common solution to for this is to leverage an In-Memory Key/Value store such as Redis and Memcached via ElastiCache.
+
+
+### 3. Your company manages MySQL databases on EC2 instances to have full control. Applications on other EC2 instances managed by an ASG make requests to these databases to get information that displays data on dashboards viewed on mobile phones, tablets, and web browsers.
+
+### Your manager would like to scale your Auto Scaling group based on the number of requests per minute. How can you achieve this?
+
+- Attach an Elastic Load Balancer
+- You create a CloudWatch custom metric and build an alarm to scale your ASG :white_check_mark:
+- Attach additional Elastic File Storage
+- You enable detailed monitoring and use that to scale your ASG 
+
+
+### 4. A cybersecurity company is publishing critical log data to a log group in Amazon CloudWatch Logs, which was created 3 months ago. The company must encrypt the log data using an AWS KMS customer master key (CMK), so any future data can be encrypted to meet the company’s security guidelines.
+
+### How can the company address this use-case?
+
+- Use the AWS CLI `create-log-group` command and specify the KMS key ARN
+- Use the AWS CLI `describe-log-groups` command and specify the KMS key ARN
+- Use the AWS CLI `associate-kms-key` command and specify the KMS key ARN :white_check_mark:
+- Enable the encrypt feature on the log group via the CloudWatch Logs console 
+
+<br>
+<hr>
+
+## S3
+
+### 1. A development team had enabled and configured CloudTrail for all the Amazon S3 buckets used in a project. The project manager owns all the S3 buckets used in the project. However, the manager noticed that he did not receive any object-level API access logs when the data was read by another AWS account.
+
+### What could be the reason for this behavior/error?
+
+- CloudTrail always delivers object-level API access logs to the requester and not to object owner
+- CloudTrail needs to be configured on both the AWS accounts for receiving the access logs in cross-account access
+- The bucket owner also needs to be object owner to get the object access logs :white_check_mark:
+- The meta-data of the bucket is in an invalid state and needs to be corrected by the bucket owner from AWS console to fix the issue
