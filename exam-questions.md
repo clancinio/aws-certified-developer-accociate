@@ -259,6 +259,7 @@ Amazon ElastiCache allows you to seamlessly set up, run, and scale popular open-
 
 To address scalability and to provide a shared data storage for sessions that can be accessed from any individual web server, you can abstract the HTTP sessions from the web servers themselves. A common solution to for this is to leverage an In-Memory Key/Value store such as Redis and Memcached via ElastiCache.
 
+<br>
 
 ### 3. Your company manages MySQL databases on EC2 instances to have full control. Applications on other EC2 instances managed by an ASG make requests to these databases to get information that displays data on dashboards viewed on mobile phones, tablets, and web browsers.
 
@@ -269,6 +270,7 @@ To address scalability and to provide a shared data storage for sessions that ca
 - Attach additional Elastic File Storage
 - You enable detailed monitoring and use that to scale your ASG 
 
+<br>
 
 ### 4. A cybersecurity company is publishing critical log data to a log group in Amazon CloudWatch Logs, which was created 3 months ago. The company must encrypt the log data using an AWS KMS customer master key (CMK), so any future data can be encrypted to meet the company’s security guidelines.
 
@@ -292,3 +294,31 @@ To address scalability and to provide a shared data storage for sessions that ca
 - CloudTrail needs to be configured on both the AWS accounts for receiving the access logs in cross-account access
 - The bucket owner also needs to be object owner to get the object access logs :white_check_mark:
 - The meta-data of the bucket is in an invalid state and needs to be corrected by the bucket owner from AWS console to fix the issue
+
+<br>
+
+### 2. A Developer has been entrusted with the job of securing certain S3 buckets that are shared by a large team of users. Last time, a bucket policy was changed, the bucket was erroneously available for everyone, outside the organization too.
+
+### Which feature/service will help the developer identify similar security issues with minimum effort?
+
+- S£ Analytics
+- S3 Object Lock
+- Access Advisor feature on IAM Console
+- IAM Access Analyzer :white_check_mark:
+
+
+<br>
+<hr>
+
+## Cloud Formation
+### 1. You are creating a Cloud Formation template to deploy your CMS application running on an EC2 instance within your AWS account. Since the application will be deployed across multiple regions, you need to create a map of all the possible values for the base AMI.
+
+### How will you invoke the !FindInMap function to fulfill this use case?
+
+- !FindInMap [ MapName, TopLevelKey ]
+
+- !FindInMap [ MapName, TopLevelKey, SecondLevelKey]  :white_check_mark:
+
+- !FindInMap [ MapName ]
+
+- !FindInMap [ MapName, TopLevelKey, SecondLevelKey, ThirdLevelKey ]
